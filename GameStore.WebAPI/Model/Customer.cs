@@ -6,6 +6,7 @@ namespace GameStore.WebAPI.Model
     {
         public int Id { get; set; }
         public string? Name { get; set; }
+        public string? Surname { get; set; }
         public string? PhoneNumber { get; set; }
         public DateTime BirthDate { get; set; }
         public IEnumerable<Order>? Orders { get; set; }
@@ -14,12 +15,13 @@ namespace GameStore.WebAPI.Model
         {
 
         }
-        public Customer(int id, string name, string phoneNumber, DateTime birthDate)
+        public Customer(int id, string name, string surname, string phoneNumber, DateTime birthDate)
         {
             this.Id = id;
             this.Name = name;
             this.PhoneNumber = phoneNumber;
             this.BirthDate = birthDate;
+            this.Surname = surname;
         }
 
     }
